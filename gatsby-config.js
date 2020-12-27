@@ -4,7 +4,23 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Jodie - Gatsby Starter Portfolio`,
+    // Used for the title template on pages other than the index site
+    siteTitle: `Dixon`,
+    // Default title of the page
+    siteTitleAlt: `Dixon - Photo Portfolio`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `Jodie - Gatsby Theme from @lekoarts`,
+    // Will be used to generate absolute URLs for og:image etc.
+    //siteUrl: `https://jodie.lekoarts.de`,
+    siteUrl: `https://photos.dixondeng.com`,
+    // Used for SEO
+    siteDescription: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
+    // Will be set on the html tag
+    siteLanguage: `en`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/banner.jpg`,
+    // Twitter Handle
+    author: `@dixon`,
   },
   plugins: [
     {
@@ -15,6 +31,7 @@ module.exports = {
           { name: `Projects`, slug: `/projects` },
           { name: `Instagram`, slug: `/instagram` },
           { name: `About`, slug: `/about` },
+          { name: `Main Site`, slug: `https://test.dixondeng.com` },
         ],
       },
     },
